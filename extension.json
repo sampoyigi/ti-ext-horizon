@@ -1,0 +1,12 @@
+{
+  "code": "igniter.horizon",
+  "name": "Horizon",
+  "author": "SamPoyigi",
+  "description": "Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.",
+  "version": "1.0.0",
+  "icon": {
+    "image": "icon.svg",
+    "backgroundColor": "#405263",
+    "color": "#FFF"
+  }
+}

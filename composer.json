@@ -1,0 +1,13 @@
+{
+  "name": "igniter/horizon",
+  "type": "igniter-extension",
+  "require": {
+    "php": ">=7.1",
+    "laravel/horizon": "^3.7"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
