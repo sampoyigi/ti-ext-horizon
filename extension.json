@@ -1,5 +1,5 @@
 {
-  "code": "igniter.horizon",
+  "code": "sampoyigi.horizon",
   "name": "Horizon",
   "author": "SamPoyigi",
   "description": "Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.",

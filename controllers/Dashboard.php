@@ -1,4 +1,4 @@
-<?php namespace Igniter\Horizon\Controllers;
+<?php namespace SamPoyigi\Horizon\Controllers;
 
 use Admin\Classes\AdminController;
 use Admin\Facades\AdminMenu;
@@ -9,7 +9,7 @@ use Admin\Facades\Template;
  */
 class Dashboard extends AdminController
 {
-    public $requiredPermissions = 'Igniter.Horizon.Access';
+    public $requiredPermissions = 'SamPoyigi.Horizon.Access';
 
     public function __construct()
     {

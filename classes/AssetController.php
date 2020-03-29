@@ -1,6 +1,6 @@
 <?php
 
-namespace Igniter\Horizon\Classes;
+namespace SamPoyigi\Horizon\Classes;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Response;

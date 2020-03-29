@@ -1,4 +1,4 @@
-<?php namespace Igniter\Horizon;
+<?php namespace SamPoyigi\Horizon;
 
 use Admin\Facades\AdminAuth;
 use Illuminate\Foundation\AliasLoader;
@@ -26,7 +26,7 @@ class Extension extends BaseExtension
                 return FALSE;
             }
 
-            return AdminAuth::getUser()->hasPermission('Igniter.Horizon.Access');
+            return AdminAuth::getUser()->hasPermission('SamPoyigi.Horizon.Access');
         });
     }
 
@@ -49,7 +49,7 @@ class Extension extends BaseExtension
     public function registerPermissions()
     {
         return [
-            'Igniter.Horizon.Access' => [
+            'SamPoyigi.Horizon.Access' => [
                 'group' => 'module',
                 'description' => 'Access to the Horizon dashboard',
             ],
@@ -71,7 +71,7 @@ class Extension extends BaseExtension
                         'class' => 'horizon',
                         'href' => admin_url('igniter/horizon/dashboard'),
                         'priority' => 500,
-                        'permissions' => ['Igniter.Horizon.Access'],
+                        'permissions' => ['SamPoyigi.Horizon.Access'],
                     ],
                 ],
             ],

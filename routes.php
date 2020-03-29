@@ -2,7 +2,7 @@
 
 Route::group([
     'prefix' => 'vendor/horizon',
-    'namespace' => 'Igniter\Horizon\Classes',
+    'namespace' => 'SamPoyigi\Horizon\Classes',
 ], function () {
     Route::get('js/app.js', 'AssetController@appJS');
 
