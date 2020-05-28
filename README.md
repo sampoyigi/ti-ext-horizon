@@ -6,9 +6,9 @@ Adds [Laravel Horizon](https://horizon.laravel.com/) to your TastyIgniter applic
 > You should ensure that your queue connection is set to `redis` in your queue configuration file.
 
 1. Install this extension
-2. Publish the laravel horizon vendors `php artisan horizon:install`
+2. Publish the laravel horizon vendors `php artisan horizon:install` (Ignore the 'Unable to detect application namespace' error')
 3. Edit `config/horizon.php` config file - [see here](https://divinglaravel.com/horizon/before-the-dive)
-4. Add `'env' => env('APP_ENV', 'production'),` to the config file `config/horizon` to run the workers defined in the config file
+4. Add `'env' => env('APP_ENV', 'production'),` to the config file `config/horizon.php` to run the workers defined in the config file
 5. Run `php artisan horizon`
 6. Go to **Tools > Horizon** or navigate to `/horizon` to access the dashboard.
 

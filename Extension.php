@@ -17,6 +17,10 @@ class Extension extends BaseExtension
      */
     public function register()
     {
+        $this->mergeConfigFrom(
+            __DIR__.'/config/horizon.php', 'horizon'
+        );
+
         $this->app->register('Laravel\Horizon\HorizonServiceProvider');
 
         AliasLoader::getInstance()->alias('Horizon', 'Laravel\Horizon\Horizon');
@@ -69,7 +73,7 @@ class Extension extends BaseExtension
                     'horizon' => [
                         'title' => 'Horizon',
                         'class' => 'horizon',
-                        'href' => admin_url('igniter/horizon/dashboard'),
+                        'href' => admin_url('sampoyigi/horizon/dashboard'),
                         'priority' => 500,
                         'permissions' => ['SamPoyigi.Horizon.Access'],
                     ],

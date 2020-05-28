@@ -1,5 +1,5 @@
 {
-  "name": "igniter/horizon",
+  "name": "sampoyigi/horizon",
   "type": "igniter-extension",
   "require": {
     "php": ">=7.1",
