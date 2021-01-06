@@ -17,7 +17,7 @@
         border: 0 none;
     }
 
-    .page-wrapper {
-        margin-top: 65px;
-    }
+    /*.page-wrapper {*/
+    /*    margin-top: 65px;*/
+    /*}*/
 </style>
