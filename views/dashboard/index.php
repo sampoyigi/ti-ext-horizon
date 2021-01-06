@@ -17,7 +17,9 @@
         border: 0 none;
     }
 
-    /*.page-wrapper {*/
-    /*    margin-top: 65px;*/
-    /*}*/
+    .page-wrapper .page-content {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 90vh;
+    }
 </style>
