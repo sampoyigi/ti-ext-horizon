@@ -1,6 +1,6 @@
 {
   "name": "sampoyigi/horizon",
-  "type": "igniter-extension",
+  "type": "tastyigniter-extension",
   "require": {
     "laravel/horizon": "^3.7"
   },
