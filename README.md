@@ -8,6 +8,7 @@ Adds [Laravel Horizon](https://horizon.laravel.com/) to your TastyIgniter applic
 1. Install this extension
 2. Edit extension `config/horizon.php` config file - [see here](https://divinglaravel.com/horizon/before-the-dive)
 3. Add `'env' => env('APP_ENV', 'production'),` to the config file `config/horizon.php` to run the workers defined in the config file
+4. Run `php artisan horizon:assets` to publish horizon assets
 4. Run `php artisan horizon`
 5. Go to **Tools > Horizon** or navigate to `/horizon` to access the dashboard.
 
