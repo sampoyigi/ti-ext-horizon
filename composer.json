@@ -11,7 +11,7 @@
   "homepage": "https://github.com/sampoyigi/horizon",
   "require": {
     "composer/installers": "~1.0",
-    "laravel/horizon": "^3.7"
+    "laravel/horizon": "^5.7"
   },
   "extra": {
     "tastyigniter-extension": {
