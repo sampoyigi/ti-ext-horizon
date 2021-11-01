@@ -1,4 +1,6 @@
-<?php namespace SamPoyigi\Horizon\Controllers;
+<?php
+
+namespace SamPoyigi\Horizon\Controllers;
 
 use Admin\Classes\AdminController;
 use Admin\Facades\AdminMenu;
