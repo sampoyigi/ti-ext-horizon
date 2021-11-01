@@ -1,4 +1,6 @@
-<?php namespace SamPoyigi\Horizon;
+<?php
+
+namespace SamPoyigi\Horizon;
 
 use Admin\Facades\AdminAuth;
 use Illuminate\Foundation\AliasLoader;
