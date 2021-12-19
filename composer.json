@@ -2,13 +2,14 @@
   "name": "sampoyigi/ti-ext-horizon",
   "type": "tastyigniter-extension",
   "description": "Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.",
+  "homepage": "https://github.com/sampoyigi/horizon",
+  "license": "MIT",
   "authors": [
     {
       "name": "SamPoyigi",
       "email": "sam@sampoyigi.com"
     }
   ],
-  "homepage": "https://github.com/sampoyigi/horizon",
   "require": {
     "composer/installers": "~1.0",
     "laravel/horizon": "^5.7"
@@ -23,7 +24,5 @@
         "color": "#FFF"
       }
     }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+  }
 }
