@@ -23,9 +23,9 @@ class Extension extends BaseExtension
             __DIR__.'/config/horizon.php', 'horizon'
         );
 
-        $this->app->register('Laravel\Horizon\HorizonServiceProvider');
+        $this->app->register(\Laravel\Horizon\HorizonServiceProvider::class);
 
-        AliasLoader::getInstance()->alias('Horizon', 'Laravel\Horizon\Horizon');
+        AliasLoader::getInstance()->alias('Horizon', \Laravel\Horizon\Horizon::class);
 
         Horizon::auth(function ($request) {
             if (!AdminAuth::check()) {
