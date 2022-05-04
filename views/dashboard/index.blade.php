@@ -1,5 +1,5 @@
 <div class="container">
-    <p class="text-right">
+    <p class="text-right my-3">
         <a
             target="_blank"
             href="{{ url('horizon') }}">
