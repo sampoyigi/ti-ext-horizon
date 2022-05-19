@@ -2,10 +2,10 @@
 
 namespace SamPoyigi\Horizon;
 
-use Admin\Facades\AdminAuth;
+use Igniter\Admin\Facades\AdminAuth;
+use Igniter\System\Classes\BaseExtension;
 use Illuminate\Foundation\AliasLoader;
 use Laravel\Horizon\Horizon;
-use System\Classes\BaseExtension;
 
 /**
  * Horizon Extension Information File
@@ -29,7 +29,7 @@ class Extension extends BaseExtension
 
         Horizon::auth(function ($request) {
             if (!AdminAuth::check()) {
-                return FALSE;
+                return false;
             }
 
             return AdminAuth::getUser()->hasPermission('SamPoyigi.Horizon.Access');

@@ -1,5 +1,4 @@
 Laravel Horizon for TastyIgniter
-=
 Adds [Laravel Horizon](https://horizon.laravel.com/) to your TastyIgniter application.
 
 ## Setup

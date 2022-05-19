@@ -2,9 +2,9 @@
 
 namespace SamPoyigi\Horizon\Controllers;
 
-use Admin\Classes\AdminController;
-use Admin\Facades\AdminMenu;
-use Admin\Facades\Template;
+use Igniter\Admin\Classes\AdminController;
+use Igniter\Admin\Facades\AdminMenu;
+use Igniter\Admin\Facades\Template;
 
 /**
  * Horizon Admin Controller
