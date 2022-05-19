@@ -1,0 +1,28 @@
+<?php
+
+namespace SamPoyigi\Horizon\Controllers;
+
+use Igniter\Admin\Classes\AdminController;
+use Igniter\Admin\Facades\AdminMenu;
+use Igniter\Admin\Facades\Template;
+
+/**
+ * Horizon Admin Controller
+ */
+class Dashboard extends AdminController
+{
+    public $requiredPermissions = 'SamPoyigi.Horizon.Access';
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        AdminMenu::setContext('horizon', 'tools');
+    }
+
+    public function index()
+    {
+        Template::setTitle('Horizon Dashboard');
+        Template::setHeading('Horizon Dashboard');
+    }
+}
