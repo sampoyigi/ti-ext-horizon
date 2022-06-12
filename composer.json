@@ -1,71 +1,33 @@
 {
-    "name": "sampoyigi/ti-ext-horizon",
-    "type": "tastyigniter-package",
-    "description": "Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.",
-    "homepage": "https://github.com/sampoyigi/horizon",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "SamPoyigi",
-            "email": "sam@sampoyigi.com"
-        }
-    ],
-    "require": {
-        "tastyigniter/core": "^v4.0",
-        "laravel/horizon": "^5.7"
-    },
-    "require-dev": {
-        "larastan/larastan": "^2.4.0",
-        "laravel/pint": "^1.2",
-        "pestphp/pest-plugin-laravel": "^3.0",
-        "rector/rector": "^1.2",
-        "sampoyigi/testbench": "dev-main as 1.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "SamPoyigi\\Horizon\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "SamPoyigi\\Horizon\\Tests\\": "tests/"
-        }
-    },
-    "extra": {
-        "tastyigniter-extension": {
-            "code": "sampoyigi.horizon",
-            "name": "Laravel Horizon for TastyIgniter",
-            "icon": {
-                "image": "icon.svg",
-                "backgroundColor": "#405263",
-                "color": "#FFF"
-            }
-        },
-        "branch-alias": {
-            "dev-master": "4.0.x-dev"
-        }
-    },
-    "scripts": {
-        "format": "vendor/bin/pint --ansi",
-        "test:refactor": "vendor/bin/rector process --dry-run --ansi",
-        "test:static": "vendor/bin/phpstan analyse --ansi --memory-limit 1056M",
-        "test:pest": "vendor/bin/pest",
-        "test:coverage": "vendor/bin/pest --coverage --exactly=100 --compact",
-        "test:type-coverage": "vendor/bin/pest --type-coverage --min=100",
-        "test": [
-            "@test:refactor",
-            "@test:static",
-            "@test:pest"
-        ]
-    },
-    "config": {
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "php-http/discovery": true,
-            "composer/installers": true
-        },
-        "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "sampoyigi/ti-ext-horizon",
+  "type": "tastyigniter-extension",
+  "description": "Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.",
+  "homepage": "https://github.com/sampoyigi/horizon",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "SamPoyigi",
+      "email": "sam@sampoyigi.com"
+    }
+  ],
+  "require": {
+    "tastyigniter/flame": "v4.x-dev",
+    "laravel/horizon": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "SamPoyigi\\Horizon\\": "src/"
+    }
+  },
+  "extra": {
+    "tastyigniter-extension": {
+      "code": "sampoyigi.horizon",
+      "name": "Laravel Horizon",
+      "icon": {
+        "image": "icon.svg",
+        "backgroundColor": "#405263",
+        "color": "#FFF"
+      }
+    }
+  }
 }
