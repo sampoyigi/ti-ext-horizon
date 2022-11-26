@@ -20,7 +20,7 @@ class Extension extends BaseExtension
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/horizon.php', 'horizon'
+            __DIR__.'/../config/horizon.php', 'horizon'
         );
 
         $this->app->register(\Laravel\Horizon\HorizonServiceProvider::class);
