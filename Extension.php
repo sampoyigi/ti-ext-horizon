@@ -29,7 +29,7 @@ class Extension extends BaseExtension
 
         Horizon::auth(function ($request) {
             if (!AdminAuth::check()) {
-                return FALSE;
+                return false;
             }
 
             return AdminAuth::getUser()->hasPermission('SamPoyigi.Horizon.Access');
@@ -77,7 +77,7 @@ class Extension extends BaseExtension
                         'class' => 'horizon',
                         'href' => admin_url('sampoyigi/horizon/dashboard'),
                         'priority' => 500,
-                        'permissions' => ['SamPoyigi.Horizon.Access'],
+                        'permission' => 'SamPoyigi.Horizon.Access',
                     ],
                 ],
             ],
