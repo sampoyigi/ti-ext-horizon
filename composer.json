@@ -11,7 +11,6 @@
     }
   ],
   "require": {
-    "tastyigniter/flame": "v4.x-dev",
     "laravel/horizon": "^5.7"
   },
   "autoload": {
