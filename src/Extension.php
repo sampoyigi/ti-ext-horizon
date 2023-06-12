@@ -2,8 +2,8 @@
 
 namespace SamPoyigi\Horizon;
 
-use Igniter\Admin\Facades\AdminAuth;
 use Igniter\System\Classes\BaseExtension;
+use Igniter\User\Facades\AdminAuth;
 use Illuminate\Foundation\AliasLoader;
 use Laravel\Horizon\Horizon;
 
@@ -75,7 +75,7 @@ class Extension extends BaseExtension
                     'horizon' => [
                         'title' => 'Horizon',
                         'class' => 'horizon',
-                        'href' => admin_url('sampoyigi/horizon/dashboard'),
+                        'href' => url(config('horizon.path')),
                         'priority' => 500,
                         'permissions' => ['SamPoyigi.Horizon.Access'],
                     ],
