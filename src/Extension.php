@@ -77,6 +77,7 @@ class Extension extends BaseExtension
                         'class' => 'horizon',
                         'href' => url(config('horizon.path')),
                         'priority' => 500,
+                        'target' => '_blank',
                         'permissions' => ['SamPoyigi.Horizon.Access'],
                     ],
                 ],
