@@ -56,7 +56,7 @@ class Extension extends BaseExtension
     {
         return [
             'SamPoyigi.Horizon.Access' => [
-                'group' => 'module',
+                'group' => 'advanced',
                 'description' => 'Access to the Horizon dashboard',
             ],
         ];
