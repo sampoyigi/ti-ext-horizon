@@ -34,8 +34,6 @@ class Extension extends BaseExtension
 
     public function register()
     {
-        config()->set('horizon.path', Igniter::adminUri().'/'.config('horizon.path'));
-
         Horizon::auth(function ($request) {
             if (!AdminAuth::check()) {
                 return false;
