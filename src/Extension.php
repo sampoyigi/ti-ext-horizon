@@ -2,7 +2,6 @@
 
 namespace SamPoyigi\Horizon;
 
-use _PHPStan_58ad5e8b3\Nette\PhpGenerator\Closure;
 use Igniter\Flame\Igniter;
 use Igniter\System\Classes\BaseExtension;
 use Igniter\User\Facades\AdminAuth;
@@ -15,7 +14,7 @@ class Extension extends BaseExtension
 {
     protected static $authCallbacks = [];
 
-    public static function defineAuth(Closure $callback)
+    public static function defineAuth(\Closure $callback)
     {
         self::$authCallbacks[] = $callback;
     }
