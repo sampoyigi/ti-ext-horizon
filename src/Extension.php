@@ -19,7 +19,7 @@ class Extension extends BaseExtension
         self::$authCallbacks[] = $callback;
     }
 
-    public function checkAuth($user)
+    public static function checkAuth($user)
     {
         foreach (self::$authCallbacks as $callback) {
             if (!is_null($result = $callback($user))) {
@@ -27,7 +27,9 @@ class Extension extends BaseExtension
             }
         }
 
-        return Igniter::isAdminUser($user) ? $user->hasPermission('SamPoyigi.Horizon.Access') : null;
+        return Igniter::isAdminUser($user)
+            ? $user->hasPermission('SamPoyigi.Horizon.Access')
+            : null;
     }
 
     public function register()
