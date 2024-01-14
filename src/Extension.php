@@ -47,12 +47,12 @@ class Extension extends BaseExtension
         });
     }
 
-    public function registerSchedule($schedule)
+    public function registerSchedule(string $schedule)
     {
         $schedule->command('horizon:snapshot')->everyFiveMinutes();
     }
 
-    public function registerPermissions()
+    public function registerPermissions(): array
     {
         return [
             'SamPoyigi.Horizon.Access' => [
@@ -62,7 +62,7 @@ class Extension extends BaseExtension
         ];
     }
 
-    public function registerNavigation()
+    public function registerNavigation(): array
     {
         return [
             'tools' => [
