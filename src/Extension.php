@@ -5,6 +5,7 @@ namespace SamPoyigi\Horizon;
 use Igniter\Flame\Igniter;
 use Igniter\System\Classes\BaseExtension;
 use Igniter\User\Facades\AdminAuth;
+use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Horizon\Horizon;
 
 /**
@@ -47,7 +48,7 @@ class Extension extends BaseExtension
         });
     }
 
-    public function registerSchedule(string $schedule)
+    public function registerSchedule(Schedule $schedule)
     {
         $schedule->command('horizon:snapshot')->everyFiveMinutes();
     }
