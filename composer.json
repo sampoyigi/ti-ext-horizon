@@ -1,32 +1,33 @@
 {
-  "name": "sampoyigi/ti-ext-horizon",
-  "type": "tastyigniter-package",
-  "description": "Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.",
-  "homepage": "https://github.com/sampoyigi/horizon",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "SamPoyigi",
-      "email": "sam@sampoyigi.com"
+    "name": "sampoyigi/ti-ext-horizon",
+    "type": "tastyigniter-package",
+    "description": "Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.",
+    "homepage": "https://github.com/sampoyigi/horizon",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SamPoyigi",
+            "email": "sam@sampoyigi.com"
+        }
+    ],
+    "require": {
+        "tastyigniter/core": "dev-master",
+        "laravel/horizon": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "SamPoyigi\\Horizon\\": "src/"
+        }
+    },
+    "extra": {
+        "tastyigniter-extension": {
+            "code": "sampoyigi.horizon",
+            "name": "Laravel Horizon",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#405263",
+                "color": "#FFF"
+            }
+        }
     }
-  ],
-  "require": {
-    "laravel/horizon": "^5.7"
-  },
-  "autoload": {
-    "psr-4": {
-      "SamPoyigi\\Horizon\\": "src/"
-    }
-  },
-  "extra": {
-    "tastyigniter-extension": {
-      "code": "sampoyigi.horizon",
-      "name": "Laravel Horizon",
-      "icon": {
-        "image": "icon.svg",
-        "backgroundColor": "#405263",
-        "color": "#FFF"
-      }
-    }
-  }
 }
