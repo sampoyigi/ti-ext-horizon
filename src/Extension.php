@@ -57,7 +57,7 @@ class Extension extends BaseExtension
     {
         return [
             'SamPoyigi.Horizon.Access' => [
-                'group' => 'advanced',
+                'group' => 'igniter::system.permissions.name',
                 'description' => 'Access to the Horizon dashboard',
             ],
         ];
