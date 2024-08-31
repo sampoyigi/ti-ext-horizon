@@ -1,33 +1,60 @@
 {
-    "name": "sampoyigi/ti-ext-horizon",
-    "type": "tastyigniter-package",
-    "description": "Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.",
-    "homepage": "https://github.com/sampoyigi/horizon",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "SamPoyigi",
-            "email": "sam@sampoyigi.com"
-        }
-    ],
-    "require": {
-        "tastyigniter/core": "dev-master",
-        "laravel/horizon": "^5.7"
-    },
-    "autoload": {
-        "psr-4": {
-            "SamPoyigi\\Horizon\\": "src/"
-        }
-    },
-    "extra": {
-        "tastyigniter-extension": {
-            "code": "sampoyigi.horizon",
-            "name": "Laravel Horizon",
-            "icon": {
-                "image": "icon.svg",
-                "backgroundColor": "#405263",
-                "color": "#FFF"
-            }
-        }
+  "name": "sampoyigi/ti-ext-horizon",
+  "type": "tastyigniter-package",
+  "description": "Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.",
+  "homepage": "https://github.com/sampoyigi/horizon",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "SamPoyigi",
+      "email": "sam@sampoyigi.com"
     }
+  ],
+  "require": {
+    "tastyigniter/core": "^v4.0@beta",
+    "laravel/horizon": "^5.7"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.2",
+    "larastan/larastan": "^2.4.0",
+    "sampoyigi/testbench": "dev-main as 1.0",
+    "pestphp/pest-plugin-laravel": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SamPoyigi\\Horizon\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SamPoyigi\\Horizon\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "tastyigniter-extension": {
+      "code": "sampoyigi.horizon",
+      "name": "Laravel Horizon",
+      "icon": {
+        "image": "icon.svg",
+        "backgroundColor": "#405263",
+        "color": "#FFF"
+      }
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/pest",
+    "test-coverage": "vendor/bin/pest --coverage",
+    "format": "vendor/bin/pint",
+    "static": "vendor/bin/phpstan analyse --ansi --memory-limit 1056M"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "php-http/discovery": true,
+      "composer/installers": true
+    },
+    "sort-packages": true
+  },
+  "minimum-stability": "beta",
+  "prefer-stable": true
 }
