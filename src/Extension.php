@@ -35,7 +35,9 @@ class Extension extends BaseExtension
 
     public function register()
     {
-        Horizon::auth(function ($request) {
+        parent::register();
+
+        Horizon::auth(function($request) {
             if (!AdminAuth::check()) {
                 return false;
             }
