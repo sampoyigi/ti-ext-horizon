@@ -33,7 +33,7 @@
   "extra": {
     "tastyigniter-extension": {
       "code": "sampoyigi.horizon",
-      "name": "Laravel Horizon",
+      "name": "Laravel Horizon for TastyIgniter",
       "icon": {
         "image": "icon.svg",
         "backgroundColor": "#405263",
