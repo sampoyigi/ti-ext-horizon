@@ -2,7 +2,7 @@
 
 namespace SamPoyigi\Horizon;
 
-use Igniter\Flame\Igniter;
+use Igniter\Flame\Support\Facades\Igniter;
 use Igniter\System\Classes\BaseExtension;
 use Igniter\User\Facades\AdminAuth;
 use Illuminate\Console\Scheduling\Schedule;
