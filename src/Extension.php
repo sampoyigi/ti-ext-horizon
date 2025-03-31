@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace SamPoyigi\Horizon;
 
 use Closure;
-use Override;
 use Igniter\Flame\Support\Facades\Igniter;
 use Igniter\System\Classes\BaseExtension;
 use Igniter\User\Facades\AdminAuth;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Horizon\Horizon;
+use Override;
 
 /**
  * Horizon Extension Information File
