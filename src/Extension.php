@@ -1,7 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SamPoyigi\Horizon;
 
+use Closure;
+use Override;
 use Igniter\Flame\Support\Facades\Igniter;
 use Igniter\System\Classes\BaseExtension;
 use Igniter\User\Facades\AdminAuth;
@@ -15,7 +19,7 @@ class Extension extends BaseExtension
 {
     protected static $authCallbacks = [];
 
-    public static function defineAuth(\Closure $callback)
+    public static function defineAuth(Closure $callback): void
     {
         self::$authCallbacks[] = $callback;
     }
@@ -33,7 +37,8 @@ class Extension extends BaseExtension
             : null;
     }
 
-    public function register()
+    #[Override]
+    public function register(): void
     {
         parent::register();
 
@@ -50,11 +55,13 @@ class Extension extends BaseExtension
         });
     }
 
-    public function registerSchedule(Schedule $schedule)
+    #[Override]
+    public function registerSchedule(Schedule $schedule): void
     {
         $schedule->command('horizon:snapshot')->everyFiveMinutes();
     }
 
+    #[Override]
     public function registerPermissions(): array
     {
         return [
@@ -65,6 +72,7 @@ class Extension extends BaseExtension
         ];
     }
 
+    #[Override]
     public function registerNavigation(): array
     {
         return [
