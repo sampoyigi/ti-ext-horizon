@@ -40,6 +40,9 @@
                 "backgroundColor": "#405263",
                 "color": "#FFF"
             }
+        },
+        "branch-alias": {
+            "dev-master": "4.0.x-dev"
         }
     },
     "scripts": {
