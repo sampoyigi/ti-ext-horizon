@@ -2,7 +2,6 @@
     "name": "sampoyigi/ti-ext-horizon",
     "type": "tastyigniter-package",
     "description": "Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.",
-    "homepage": "https://github.com/sampoyigi/horizon",
     "license": "MIT",
     "authors": [
         {
@@ -45,19 +44,8 @@
             "dev-master": "4.0.x-dev"
         }
     },
-    "scripts": {
-        "format": "vendor/bin/pint --ansi",
-        "test:refactor": "vendor/bin/rector process --dry-run --ansi",
-        "test:static": "vendor/bin/phpstan analyse --ansi --memory-limit 1056M",
-        "test:pest": "vendor/bin/pest",
-        "test:coverage": "vendor/bin/pest --coverage --exactly=100 --compact",
-        "test:type-coverage": "vendor/bin/pest --type-coverage --min=100",
-        "test": [
-            "@test:refactor",
-            "@test:static",
-            "@test:pest"
-        ]
-    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "config": {
         "allow-plugins": {
             "pestphp/pest-plugin": true,
@@ -66,6 +54,22 @@
         },
         "sort-packages": true
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "scripts": {
+        "test:lint": "vendor/bin/pint --test --ansi",
+        "test:lint-fix": "vendor/bin/pint --ansi",
+        "test:refactor": "vendor/bin/rector process --dry-run --ansi",
+        "test:refactor-fix": "vendor/bin/rector process --ansi",
+        "test:static": "vendor/bin/phpstan analyse --memory-limit 1056M --ansi",
+        "test:static-fix": "vendor/bin/phpstan --generate-baseline --memory-limit 1056M --ansi",
+        "test:pest": "vendor/bin/pest",
+        "test:coverage": "vendor/bin/pest --coverage --exactly=100 --compact",
+        "test:type-coverage": "vendor/bin/pest --type-coverage --min=100",
+        "test": [
+            "@test:lint",
+            "@test:refactor",
+            "@test:static",
+            "@test:coverage"
+        ]
+    },
+    "homepage": "https://github.com/sampoyigi/horizon"
 }
