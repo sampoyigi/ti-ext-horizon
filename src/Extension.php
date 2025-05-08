@@ -17,7 +17,7 @@ use Override;
  */
 class Extension extends BaseExtension
 {
-    protected static $authCallbacks = [];
+    protected static array $authCallbacks = [];
 
     public static function defineAuth(Closure $callback): void
     {
@@ -47,11 +47,7 @@ class Extension extends BaseExtension
                 return false;
             }
 
-            if (request()->bearerToken() && request()->bearerToken() === config('services.horizon.token')) {
-                return true;
-            }
-
-            return AdminAuth::getUser()->hasPermission('SamPoyigi.Horizon.Access');
+            return self::checkAuth(AdminAuth::getUser());
         });
     }
 
