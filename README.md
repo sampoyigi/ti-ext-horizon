@@ -5,11 +5,11 @@ Adds [Laravel Horizon](https://horizon.laravel.com/) to your TastyIgniter applic
 > You should ensure that your queue connection is set to `redis` in your queue configuration file.
 
 1. Install this extension
-2. Edit extension `config/horizon.php` config file - [see here](https://divinglaravel.com/horizon/before-the-dive)
-3. Add `'env' => env('APP_ENV', 'production'),` to the config file `config/horizon.php` to run the workers defined in the config file
-4. Run `php artisan horizon:assets` to publish horizon assets
-4. Run `php artisan horizon`
-5. Go to **Tools > Horizon** or navigate to `/horizon` to access the dashboard.
+2. After installing this extension, run `php artisan horizon:install` to publish horizon assets
+3. Run `php artisan horizon` to start the horizon process
+5. From the TastyIgniter Admin, go to **Tools > Horizon** or navigate to `/horizon` to access the dashboard.
+6. Comment out the `App\Providers\HorizonServiceProvider::class` class from your `config/app.php` file to configure Dashboard Authorization to use TastyIgniter user permissions.
+7. To keep the horizon process running, you can use a process manager like [supervisord](http://supervisord.org/) or [systemd](https://www.freedesktop.org/wiki/Software/systemd/).
 
 For production this command needs to be supervised by a tool like supervisord.
 Supervisord will take care of restarting a process when it fails.
