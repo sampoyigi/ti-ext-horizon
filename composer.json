@@ -68,7 +68,7 @@
             "@test:refactor",
             "@test:static",
             "@test:lint",
-            "@test:coverage"
+            "@test:pest"
         ]
     },
     "homepage": "https://github.com/sampoyigi/horizon"
